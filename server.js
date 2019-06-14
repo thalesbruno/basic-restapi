@@ -15,7 +15,7 @@ require('./src/models/Product')
 
 
 /* Routes */
-// Defining base route and calling the others
+// Defining base route and referencing the others
 app.use('/api/v1', require('./src/routes'))
 
 
