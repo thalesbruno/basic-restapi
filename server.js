@@ -1,5 +1,6 @@
 /* Imports */
 const express = require('express')
+const cors = require('cors')
 const mongoose = require('mongoose')
 
 
@@ -7,6 +8,7 @@ const mongoose = require('mongoose')
 const app = express()
 // permision to send data in json format to application
 app.use(express.json())
+app.use(cors())
 
 
 /* DB connection */

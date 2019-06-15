@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/thalesbruno/basic-restapi#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.5.14",
     "mongoose-paginate": "^5.0.3"
