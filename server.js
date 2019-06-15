@@ -10,7 +10,7 @@ app.use(express.json())
 
 
 /* DB connection */
-mongoose.connect('mongodb://localhost:27017/db-myapp',{ useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/db-myapp', { useNewUrlParser: true })
 require('./src/models/Product')
 
 

@@ -1,4 +1,3 @@
-/* Imports */
 const mongoose = require('mongoose')
 const Product = mongoose.model('Product')
 
@@ -7,7 +6,8 @@ module.exports = {
 
   // listing all products
   async index(req, res) {
-    const products = await Product.find()
+    const { page = 1 } = req.query
+    const products = await Product.paginate({}, { page, limit: 10 })
     return res.json(products)
   },
 
@@ -36,6 +36,5 @@ module.exports = {
   (node:8419) DeprecationWarning: Mongoose: `findOneAndUpdate()` and `findOneAndDelete()` 
   without the `useFindAndModify` option set to false are deprecated. 
   See: https://mongoosejs.com/docs/deprecations.html#-findandmodify- */
-
 
 }
